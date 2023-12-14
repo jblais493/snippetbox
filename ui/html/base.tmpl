@@ -1,0 +1,31 @@
+{{define "base"}}
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{template "title" .}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Snippetbox</a></h1>
+        </header>
+
+        {{template "nav" .}}
+
+        <main>
+            {{template "main" .}}
+        </main>
+
+        <footer>
+            Powered by <a href="https://golang.org">Go</a>
+        </footer>
+    </body>
+</html>
+{{end}}

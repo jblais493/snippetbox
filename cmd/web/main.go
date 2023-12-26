@@ -14,7 +14,7 @@ import (
 // Structs
 type application struct {
 	logger   *slog.Logger
-	snippets *models.Snippetmodel
+	snippets *models.SnippetModel
 }
 
 // Routing
@@ -36,7 +36,7 @@ func main() {
 
 	app := &application{
 		logger:   logger,
-		snippets: *models.Snippetmodel{DB: db},
+		snippets: &models.SnippetModel{DB: db},
 	}
 
 	logger.Info("starting server", "addr", *addr)
